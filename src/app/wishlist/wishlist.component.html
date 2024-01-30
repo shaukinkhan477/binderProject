@@ -1,0 +1,15 @@
+<div class="profile-container">
+  <div class="course-cards" *ngFor =" let item of wishlistItems">
+      <div  class="course-card" >
+        <img src={{item.courseImg}} alt="">
+        <div class="info">
+          <h3>{{item.courseName}}</h3>
+          <span>Author: {{item.author}}</span>
+          <a class="btn light " (click)="addToCart(item)">Add To Cart</a>
+          <div class="actualPrice"><s>{{item.actualPrice}}</s>Rs</div>
+          <div class="discPercent">{{item.discountPercentage}} ⬇️</div>
+          <div class="DiscPrice">{{item.discountPrice}}</div>
+        </div>
+      </div>
+    </div>
+    </div>

@@ -1,0 +1,60 @@
+<header *ngIf="showHeader" >
+  <div class="wrapper">
+    <nav [class.scrolled]="header_variable" >
+      <div><a class="logo" routerLink="/dashboard" routerLinkActive="active">Binder</a></div>
+      <ul>
+
+       <li>
+        <div class="searchbar-container">
+          <div class="search-bar">
+            <input type="text" placeholder="Search courses" [(ngModel)]="searchText" />
+            <button (click)="searchCourses()">Search</button>
+          </div>
+          <div class="sort-options">
+            <button (click)="sortCourses('lowest')">Sort by Lowest</button>
+            <button (click)="sortCourses('highest')">Sort by Highest</button>
+          </div>
+          </div>
+        </li>
+
+        <li>
+          <a routerLink="/dashboard">Dashboard</a>
+        </li>
+        <li>
+          <a routerLink="/courses">Courses</a>
+        </li>
+        <li>
+          <a routerLink="/wishlist">My Wishlist</a>
+        </li>
+        <li>
+          <div>
+           <a  routerLink="/cart" routerLinkActive="active"><mat-icon class="cart topFix">shopping_cart</mat-icon></a>
+          <span  routerLink="/cart" routerLinkActive="active" class="cart_value topFix">{{cartCount}}</span>
+          </div>
+        </li>
+        <li>
+          <a routerLink="/myprofile">My Profile</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+
+
+<!-- Display search results -->
+<div class="resuls" *ngIf="sortedProducts.length > 0">
+  <div class="results-container">
+    <div *ngFor="let product of sortedProducts" class="result-item">
+      <!-- Display relevant information for each product -->
+      <img [src]="product.courseImg" alt="Course Image" />
+      <h3>{{ product.courseName }}</h3>
+      <p>Author: {{ product.author }}</p>
+      <p>Price: {{ product.actualPrice }}</p>
+      <a><mat-icon class="star material-icons" (click)="addToWishlist(product)">star</mat-icon></a>
+      <button (click)="addToCart(product)">Add to Cart</button>
+      <!-- Add more details as needed -->
+    </div>
+  </div>
+</div>

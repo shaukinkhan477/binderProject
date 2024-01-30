@@ -1,0 +1,42 @@
+<section class="courses-section">
+  <div class="wrapper">
+    <h2 class="light">All Courses</h2>
+    <div class="course-cards" *ngFor =" let product of pageSlice">
+      <div  class="course-card"  >
+        <img src={{product.courseImg}} alt="">
+        <div class="info">
+          <h3>{{product.courseName}}</h3>
+          <span>Author: {{product.author}}</span>
+          <a class="btn light addCart" (click)="navigateToCourseDetail(product.id)">See Details➡️</a>
+          <a><mat-icon class="star material-icons" (click)="addToCart(product)">shopping_cart</mat-icon></a>
+          <a><mat-icon class="star material-icons" (click)="addToWishlist(product)">star</mat-icon></a>
+          <div class="actualPrice"><s>{{product.actualPrice}}</s>Rs</div>
+          <div class="discPercent">{{product.discountPercentage}} ⬇️</div>
+          <div class="DiscPrice">{{product.discountPrice}}</div>
+        </div>
+      </div>
+    </div>
+    <mat-paginator class="paginator" [length]="this.products.length"
+              [pageSize]="defaultPageSize"
+              [pageSizeOptions]="[3, 6, 9]"
+              [pageIndex]="currentPage"
+              aria-label="Select page"
+              (page)="onPageChange($event)">
+    </mat-paginator>
+
+  </div>
+</section>
+
+
+
+<!-- <div *ngFor="let product of products">
+  <h3>{{ product.name }}</h3>
+  <p>Price: ${{ product.price }}</p>
+  <span>{{product.courseName}}</span>
+  <button (click)="addToCart(product)">Add to Cart</button>
+</div> -->
+
+
+
+
+

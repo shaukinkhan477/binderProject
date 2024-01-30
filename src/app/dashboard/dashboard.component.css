@@ -1,0 +1,142 @@
+.btn{
+  padding: 16px 32px;
+  border-radius: 24px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.btn.dark{
+  background: var(--dark-blue-color);
+}
+
+.info{
+  position: relative;
+}
+
+.addCart{
+  top: 78px;
+  margin-right:20px;
+}
+
+a{
+  cursor: pointer;
+}
+.btn.light{
+  background: var(--orange-color);
+  margin-top: 10px;
+  position: absolute;
+}
+
+div .wrapper {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  height: 100vh;
+  width: 100%;
+}
+
+h1 {
+font-size: 50px;
+font-style: normal;
+font-weight: 900;
+line-height: 125%;
+}
+
+p {
+font-size: 16px;
+font-weight: 400;
+line-height: 200%;
+margin-bottom: 30px;
+}
+
+.hero-section .left {
+  width: 457px;
+}
+
+.hero-section .right{
+  align-self: flex-end;
+}
+
+
+.right img{
+ height: 480px;
+ vertical-align: middle;
+}
+
+.courses-section{
+  padding: 70px 0;
+}
+
+h2{
+color: #FFF;
+text-align: center;
+font-size: 60px;
+font-weight: 900;
+margin-top: 0px;
+}
+
+.course-cards{
+  display: flex;
+  gap: 60px;
+  display: inline-block;
+  margin: 40px;
+}
+
+.course-cards img {
+  width: 200px;
+  height: 170px;
+  margin-left: 36px;
+}
+
+.course-card{
+  background: #ffffff;
+  border-radius: 24px;
+  padding: px 32px;
+  /* margin: 20px 0; */
+  width: 280px;
+  height: 340px;
+  position: relative;
+}
+
+.course-card::after {
+  content: "";
+  height: 8px;
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 0;
+  background: var(--dark-blue-color);
+  border-radius: 24px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.courses-section .wrapper .btn {
+  position: absolute;
+  right: 0;
+}
+
+.cart{
+  color: red;
+  margin-left: 80px;
+}
+
+.actualPrice{
+  color: red;
+}
+
+.discPercent{
+  color: rgb(138, 226, 5);
+}
+
+
+.star{
+  margin-left: 40px;
+}

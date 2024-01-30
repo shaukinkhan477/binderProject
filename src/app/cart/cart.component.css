@@ -1,0 +1,168 @@
+
+h2 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #ddd;
+  margin: 5px;
+  padding: 8px;
+  background-color: #f9f9f9;
+}
+
+
+
+
+.course-cards{
+  display: flex;
+  gap: 60px;
+  display: inline-block;
+  margin: 40px;
+
+}
+
+h2{
+color: #FFF;
+text-align: center;
+font-size: 60px;
+font-weight: 900;
+margin-top: px;
+padding-top: 80px;
+}
+
+.paginator{
+  margin-bottom: 20px;
+}
+
+.course-cards img {
+  width: 200px;
+  height: 170px;
+  margin-left: 36px;
+}
+
+.course-card{
+  background: #ffffff;
+  border-radius: 24px;
+  padding: px 32px;
+  /* margin: 20px 0; */
+  width: 280px;
+  height: 340px;
+  position: relative;
+   margin-top: 70px;
+}
+
+.course-card::after {
+  content: "";
+  height: 8px;
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 0;
+  background: var(--dark-blue-color);
+  border-radius: 24px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.courses-section .wrapper .btn {
+  position: absolute;
+  right: 0;
+}
+
+
+
+.delete{
+  color: red;
+  /* margin-right: 80px; */
+  margin-left: 60px;
+}
+
+.star{
+  margin-left: 20px;
+}
+
+.actualPrice{
+  color: red;
+}
+
+.discPercent{
+  color: rgb(138, 226, 5);
+}
+
+
+.profile-container{
+  /* height: 100%; */
+  background: linear-gradient(180deg, #6F7DFB 0%, #26308C 100%);
+}
+
+a{
+  cursor: pointer;
+}
+
+.btn{
+  padding: 16px 32px;
+  border-radius: 24px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.btn.light{
+  background: var(--orange-color);
+  margin-top: 10px;
+  position: absolute;
+  top: 256px;
+    right: 65px;
+}
+
+
+.price{
+  color: mediumspringgreen;
+  margin-left: 1000px;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+
+
+/* cart Summary */
+.cart-summary {
+  position: fixed;
+  top: 90px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: right;
+  border-radius: 5px;
+}
+
+.cart-summary div {
+  /* display: inline-block; */
+  margin-left: 10px;
+  margin-top: 50px;
+}
+
+.cart-summary a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  border: 1px solid #4CAF50;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cart-summary a:hover {
+  background-color: #45a049;
+}
+

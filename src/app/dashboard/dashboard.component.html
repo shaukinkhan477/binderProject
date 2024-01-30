@@ -1,0 +1,41 @@
+
+<div class="hero-section">
+  <div class="wrapper">
+  <div class="left"><h1>Discover Our Latest courses</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ipsam ad iste laborum necessitatibus recusandae, vitae provident animi dicta explicabo.</p>
+    <a class="btn light"routerLink="/courses" routerLinkActive="active"> Explore More Courses</a>
+  </div>
+  <div class="right">
+    <img src="assets/images/hero-image.png" alt="">
+  </div>
+  </div>
+</div>
+
+<section class="courses-section">
+  <div class="wrapper">
+    <h2 class="light">Our Courses</h2>
+  <div class="course-cards" *ngFor =" let product of pageSlice">
+      <div  class="course-card" >
+        <img src={{product.courseImg}} alt="">
+        <div class="info">
+          <h3>{{product.courseName}}</h3>
+          <span>Author: {{product.author}}</span>
+           <a class="btn light addCart" (click)="navigateToCourseDetail(product.id)">See Details➡️</a>
+          <a><mat-icon class="star material-icons" (click)="addToCart(product)">shopping_cart</mat-icon></a>
+          <a><mat-icon class="star material-icons" (click)="addToWishlist(product)">star</mat-icon></a>
+          <div class="actualPrice"><s>{{product.actualPrice}}</s>Rs</div>
+          <div class="discPercent">{{product.discountPercentage}} ⬇️</div>
+          <div class="DiscPrice">{{product.discountPrice}}</div>
+        </div>
+      </div>
+    </div>
+     <mat-paginator class="paginator" [length]="this.products.length"
+              [pageSize]="defaultPageSize"
+              [pageSizeOptions]="[2, 6, 3]"
+              [pageIndex]="currentPage"
+              aria-label="Select page"
+              (page)="onPageChange($event)">
+</mat-paginator>
+    <a class="btn light" routerLink="/courses" routerLinkActive="active">All Courses</a>
+  </div>
+</section>

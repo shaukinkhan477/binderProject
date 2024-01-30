@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --orange-color: #da722c;
+  --dark-blue-color: #023047;
+  --dark-color: #070917;
+  --light-color: #E8F7FB;
+  --light-blue-color: #6F7DFB;
+}
+
+html
+{
+font-family: 'Montserrat', sans-serif;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+  max-width: 1134px;
+  margin: 0 auto;
+}
+
+header, .hero-section, .courses-section, .paginator, .profile-container
+{
+  background: linear-gradient(180deg, #6F7DFB 0%, #26308C 100%);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Montserrat', sans-serif; }

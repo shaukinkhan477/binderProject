@@ -1,0 +1,22 @@
+<div class="profile-container">
+<div class="course-cards" *ngFor="let item of cartItems">
+      <div  class="course-card" >
+        <img src={{item.courseImg}} alt="">
+        <div class="info">
+          <h3>{{item.courseName}}</h3>
+          <span>Author: {{item.author}}</span>
+          <a><mat-icon class="star" (click)="addToWishlist(products)">star</mat-icon></a>
+          <a  (click)="removeFromCart(item)"><mat-icon class="delete">delete</mat-icon></a>
+          <div class="actualPrice"><s>{{item.actualPrice}}</s>Rs</div>
+          <div class="discPercent">{{item.discountPercentage}} ⬇️</div>
+          <div class="DiscPrice">{{item.discountPrice}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+    <div>Total Price: ₹{{totalPrice}}</div>
+    <div>Total Savings: ₹{{totalSavings}}</div>
+    <a class="btn light" (click)="checkout()">Check Out</a>
+    </div>
+

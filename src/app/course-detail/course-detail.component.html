@@ -1,0 +1,37 @@
+<section class="course-detail-section">
+  <div class="page-banner">
+    <h1>Discover Latest Courses on {{ course.courseName }}</h1>
+  </div>
+
+  <div class="breadcrumb">
+    <a routerLink="/dashboard">Dashboard</a> &gt; {{ course.courseName }}
+  </div>
+
+  <div class="wrapper">
+    <div class="course-content">
+      <h2>{{ course.courseName }}</h2>
+      <p>Author: {{ course.author }}</p>
+      <div class="actualPrice"><s>{{ course.actualPrice }}</s>Rs</div>
+      <div class="discPercent">{{ course.discountPercentage }} ⬇️</div>
+      <div class="discPrice">{{ course.discountPrice }}</div>
+      <strong>Discription:</strong>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium voluptates ullam cupiditate esse est voluptas eveniet asperiores. Consectetur modi voluptatum natus accusamus. Ad libero quasi non explicabo, pariatur corrupti dolorem doloremque quaerat eum fugiat asperiores reiciendis, error esse nulla, accusantium architecto fugit assumenda laboriosam a. Inventore, repellendus alias fugit explicabo tempore dolores. Facere pariatur dolore itaque commodi iusto rem quo!</p>
+
+    </div>
+
+    <div class="video-card">
+      <div class="thumbnail">
+        <img src="{{ course.courseImg }}" alt="Course Thumbnail">
+      </div>
+      <div class="video-details">
+        <p>Price: {{ course.discountPrice }}</p>
+        <button (click)="addToCart(course)">Add to Cart</button>
+        <button (click)="addToWishlist(course)">Add to Wishlist</button>
+        <div class="time-left" *ngIf="calculateTimeLeft(course) > 0">
+          Time Left: {{ calculateTimeLeft(course) }} hours
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

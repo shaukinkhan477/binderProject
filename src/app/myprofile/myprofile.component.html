@@ -1,0 +1,75 @@
+<!-- profile.component.html -->
+
+<div class="profile-container">
+  <div class="profile-image">
+    <!-- Display profile image here -->
+    <img src="path/to/profile-image.jpg" alt="Profile Image">
+  </div>
+  <div class="profile-details">
+    <h2>My Profile</h2>
+    <form (ngSubmit)="saveProfile()" #profileForm="ngForm">
+
+      <!-- Display name -->
+      <div class="form-group">
+        <label for="displayName">Display Name*</label>
+        <input type="text" id="displayName" name="displayName" [(ngModel)]="profile.displayName" required>
+      </div>
+
+      <!-- First name -->
+      <div class="form-group">
+        <label for="firstName">First Name*</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="profile.firstName" required>
+      </div>
+
+      <!-- Last name -->
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="profile.lastName">
+      </div>
+
+      <!-- About yourself -->
+      <div class="form-group">
+        <label for="aboutYourself">About Yourself (Max 100 characters)</label>
+        <textarea id="aboutYourself" name="aboutYourself" [(ngModel)]="profile.aboutYourself" maxlength="100"></textarea>
+      </div>
+
+      <!-- Area of interest -->
+      <div class="form-group">
+        <label for="areaOfInterest">Your Area of Interest</label>
+        <select id="areaOfInterest" name="areaOfInterest" multiple [(ngModel)]="profile.areaOfInterest">
+          <!-- Add options dynamically from your data source -->
+          <option value="backend">Backend</option>
+          <option value="frontend">Frontend</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+
+      <!-- Student or Professional -->
+      <div class="form-group">
+        <label>Are you a student or a professional?</label>
+        <label><input type="radio" name="userType" [(ngModel)]="profile.userType" value="student"> Student</label>
+        <label><input type="radio" name="userType" [(ngModel)]="profile.userType" value="professional"> Professional</label>
+      </div>
+
+      <!-- Professional details -->
+      <div *ngIf="profile.userType === 'professional'">
+        <div class="form-group">
+          <label for="experience">Experience</label>
+          <select id="experience" name="experience" [(ngModel)]="profile.experience">
+            <option value="0-5">0-5 years</option>
+            <option value="5-10">5-10 years</option>
+            <option value="10+">10 years and above</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="expertise">Expertise</label>
+          <label><input type="checkbox" name="expertise" value="backend" [(ngModel)]="profile.expertise.backend"> Backend</label>
+          <label><input type="checkbox" name="expertise" value="frontend" [(ngModel)]="profile.expertise.frontend"> Frontend</label>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="!profileForm.valid">Save Profile</button>
+    </form>
+  </div>
+</div>

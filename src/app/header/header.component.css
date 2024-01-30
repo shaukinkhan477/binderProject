@@ -1,0 +1,136 @@
+nav
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 1134px;
+  top: 0px;
+  padding: 36px 0;
+  z-index: 100;
+}
+
+/* .topFix{
+  position: fixed;
+  z-index: 100;
+} */
+
+nav.scrolled {
+  background: var(--dark-color);
+  box-shadow: 0 16px 14px -8px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 8px 8px;
+  top: 0;
+  padding: 12px;
+  transition: all 500ms ease;
+}
+
+.logo{
+font-size: 40px;
+font-weight: 900;
+color: #fff;
+text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li a {
+color: #FFF;
+font-size: 16px;
+font-weight: 700;
+text-decoration: none;
+}
+
+.cart_value{
+  position: absolute;
+  top: 9px;
+  right: 79px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+
+/* Search bar styles */
+
+.searchbar-container{
+  display: flex;
+}
+.search-bar {
+  /* margin-right: 50px; */
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Sort options styles */
+.sort-options button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Apply some hover effect to the buttons */
+.sort-options button:hover, .search-bar button:hover {
+  background-color: #333;
+}
+
+
+/* Search results styles */
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 120px;
+}
+
+.result-item {
+  width: 250px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.result-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.result-item h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.result-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
